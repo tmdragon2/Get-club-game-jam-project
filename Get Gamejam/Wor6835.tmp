@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://bu2g0xqct1u5t"]
+[gd_scene load_steps=5 format=3 uid="uid://bu2g0xqct1u5t"]
 
 [ext_resource type="PackedScene" uid="uid://blr7g2hl3gej" path="res://Platform.tscn" id="1_vbp68"]
 [ext_resource type="PackedScene" uid="uid://ws1o58f8l44h" path="res://Player.tscn" id="2_km0iy"]
 [ext_resource type="PackedScene" uid="uid://degvwt1uuakvs" path="res://enemy.tscn" id="3_5mqlw"]
+
+[sub_resource type="TileSet" id="TileSet_ilyci"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -21,3 +23,7 @@ position = Vector2(125, 472)
 
 [node name="Enemy" parent="." instance=ExtResource("3_5mqlw")]
 position = Vector2(744, 461)
+
+[node name="TileMap" type="TileMap" parent="Enemy"]
+tile_set = SubResource("TileSet_ilyci")
+format = 2

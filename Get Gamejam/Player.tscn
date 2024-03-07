@@ -1,17 +1,34 @@
-[gd_scene load_steps=4 format=3 uid="uid://ws1o58f8l44h"]
+[gd_scene load_steps=5 format=3 uid="uid://ws1o58f8l44h"]
 
 [ext_resource type="Script" path="res://node_2d.gd" id="1_tn22h"]
 [ext_resource type="Texture2D" uid="uid://3c63qdnidspf" path="res://icon.svg" id="2_lqhgl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lymii"]
-size = Vector2(126, 127)
+size = Vector2(107, 117)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_garyl"]
+size = Vector2(128, 131)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_tn22h")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_lqhgl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -0.5)
+position = Vector2(0.5, 1.5)
 shape = SubResource("RectangleShape2D_lymii")
+
+[node name="Hurtbox_detector" type="Area2D" parent="."]
+position = Vector2(0, -0.5)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox_detector"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_garyl")
+
+[connection signal="body_entered" from="Hurtbox_detector" to="." method="_on_hurtbox_detector_body_entered"]
