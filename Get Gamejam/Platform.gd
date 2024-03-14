@@ -15,3 +15,21 @@ func _process(delta: float) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	audio_player.play()
 	print("audio played")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
