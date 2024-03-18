@@ -16,3 +16,11 @@ func _physics_process(delta: float) -> void:
 
 
 	move_and_slide()
+
+
+func _on_hurtbox_body_entered(body: Node2D) -> void:
+	pass
+
+
+func _on_hurtbox_body_exited(body: Node2D) -> void:
+	pass # Replace with function body.

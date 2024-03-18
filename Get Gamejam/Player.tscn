@@ -1,29 +1,103 @@
-[gd_scene load_steps=6 format=3 uid="uid://ws1o58f8l44h"]
+[gd_scene load_steps=18 format=3 uid="uid://ws1o58f8l44h"]
 
-[ext_resource type="Script" path="res://node_2d.gd" id="1_tn22h"]
+[ext_resource type="Script" path="res://player.gd" id="1_840ni"]
 [ext_resource type="Texture2D" uid="uid://3c63qdnidspf" path="res://icon.svg" id="2_lqhgl"]
+[ext_resource type="Texture2D" uid="uid://cy8wh0g5d501t" path="res://frog_jump/frog jump/frame0001.png" id="3_4et8e"]
+[ext_resource type="Texture2D" uid="uid://donw21dnr084f" path="res://frog_jump/frog jump/frame0002.png" id="4_yqehr"]
+[ext_resource type="Texture2D" uid="uid://b31rh47n6gx4h" path="res://frog_jump/frog jump/frame0004.png" id="5_o87c1"]
+[ext_resource type="Texture2D" uid="uid://c746pl2cs5538" path="res://frog_jump/frog jump/frame0006.png" id="6_ff8bc"]
+[ext_resource type="Texture2D" uid="uid://bvqwm6swqf7eg" path="res://frog_jump/frog jump/frame0008.png" id="7_jha68"]
+[ext_resource type="Texture2D" uid="uid://wbpg6e7swlou" path="res://frog_jump/frog jump/frame0010.png" id="8_peh4j"]
+[ext_resource type="Texture2D" uid="uid://blds04t1djffn" path="res://frog_jump/frog jump/frame0012.png" id="9_ve5hw"]
+[ext_resource type="Texture2D" uid="uid://cv83xqlw7oax4" path="res://frog_jump/frog jump/frame0014.png" id="10_oqekb"]
+[ext_resource type="Texture2D" uid="uid://byy78jruhg2ox" path="res://frog_jump/frog jump/frame0016.png" id="11_qaha5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lymii"]
-size = Vector2(107, 117)
+size = Vector2(107, 93)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_garyl"]
-size = Vector2(128, 131)
+size = Vector2(137, 125)
+
+[sub_resource type="Animation" id="Animation_cdfqq"]
+length = 0.9
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Player_Jump"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hbyoc"]
+_data = {
+"Player_Jump": SubResource("Animation_cdfqq")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_46g8s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_4et8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_yqehr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_o87c1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ff8bc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jha68")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_peh4j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ve5hw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_oqekb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_qaha5")
+}],
+"loop": false,
+"name": &"Player_Jump",
+"speed": 10.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_weohk"]
 size = Vector2(123, 23)
 
 [node name="Player" type="CharacterBody2D"]
-script = ExtResource("1_tn22h")
+script = ExtResource("1_840ni")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_enabled = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_lqhgl")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 1.5)
+position = Vector2(0.5, -10.5)
 shape = SubResource("RectangleShape2D_lymii")
+metadata/_edit_lock_ = true
 
 [node name="Coyotejumptimer" type="Timer" parent="."]
 wait_time = 0.2
@@ -33,15 +107,35 @@ one_shot = true
 position = Vector2(0, -0.5)
 collision_layer = 2
 collision_mask = 2
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox_detector"]
-position = Vector2(0, -1)
+position = Vector2(-0.5, -15)
 shape = SubResource("RectangleShape2D_garyl")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_hbyoc")
+}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, 0)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_46g8s")
+animation = &"Player_Jump"
+offset = Vector2(90, -40)
+metadata/_edit_lock_ = true
+
+[node name="Hitbox_detector" type="Area2D" parent="."]
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox_detector"]
 position = Vector2(116.5, -3.5)
 shape = SubResource("RectangleShape2D_weohk")
+
+[node name="Sprite2D" type="Sprite2D" parent="Hitbox_detector"]
+position = Vector2(116.5, -3.5)
+scale = Vector2(0.976563, 0.195312)
+texture = ExtResource("2_lqhgl")
 
 [connection signal="body_entered" from="Hurtbox_detector" to="." method="_on_hurtbox_detector_body_entered"]
