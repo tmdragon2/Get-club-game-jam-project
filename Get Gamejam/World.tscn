@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bu2g0xqct1u5t"]
+[gd_scene load_steps=6 format=3 uid="uid://bu2g0xqct1u5t"]
 
 [ext_resource type="PackedScene" uid="uid://blr7g2hl3gej" path="res://Platform.tscn" id="1_vbp68"]
 [ext_resource type="PackedScene" uid="uid://ws1o58f8l44h" path="res://Player.tscn" id="2_km0iy"]
 [ext_resource type="PackedScene" uid="uid://degvwt1uuakvs" path="res://enemy.tscn" id="3_5mqlw"]
+[ext_resource type="PackedScene" uid="uid://b388mj5ldyxro" path="res://NME.tscn" id="4_ugeix"]
 
 [sub_resource type="TileSet" id="TileSet_q5g81"]
 tile_size = Vector2i(160, 160)
@@ -17,10 +18,10 @@ scale = Vector2(12.54, 0.975)
 position = Vector2(1022, 459)
 
 [node name="Platform3" parent="." instance=ExtResource("1_vbp68")]
-position = Vector2(112, 454)
+position = Vector2(1269, 428)
 
 [node name="Enemy" parent="." instance=ExtResource("3_5mqlw")]
-position = Vector2(744, 461)
+position = Vector2(281, 187)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_q5g81")
@@ -28,3 +29,6 @@ format = 2
 
 [node name="Player" parent="." instance=ExtResource("2_km0iy")]
 position = Vector2(486, 375)
+
+[node name="NME" parent="." instance=ExtResource("4_ugeix")]
+position = Vector2(833, 426)

@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://b388mj5ldyxro"]
+
+[ext_resource type="Script" path="res://NME.gd" id="1_6r3ok"]
+[ext_resource type="Texture2D" uid="uid://3c63qdnidspf" path="res://icon.svg" id="1_tyo73"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ildu0"]
+size = Vector2(123.75, 123.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jgfe6"]
+size = Vector2(150, 158.75)
+
+[node name="NME" type="CharacterBody2D" groups=["Enemy", "Hit"]]
+scale = Vector2(0.8, 0.8)
+collision_layer = 2
+script = ExtResource("1_6r3ok")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3.125, 0.625001)
+shape = SubResource("RectangleShape2D_ildu0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_tyo73")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(-63, 22)
+target_position = Vector2(0, 67)
+
+[node name="Hurtbox" type="Area2D" parent="."]
+position = Vector2(-3, 0)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(6.74998, -1.87497)
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("RectangleShape2D_jgfe6")
+
+[connection signal="body_entered" from="Hurtbox" to="." method="_on_area_2d_body_entered"]

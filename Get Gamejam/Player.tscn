@@ -30,7 +30,7 @@
 size = Vector2(88, 86)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_garyl"]
-size = Vector2(118, 110)
+size = Vector2(119, 115)
 
 [sub_resource type="Animation" id="Animation_cdfqq"]
 length = 0.9
@@ -151,6 +151,7 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 0
 script = ExtResource("1_840ni")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -169,7 +170,7 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox_detector"]
-position = Vector2(2, 0.5)
+position = Vector2(1.5, 3)
 shape = SubResource("RectangleShape2D_garyl")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -181,9 +182,9 @@ libraries = {
 script = ExtResource("2_yeoo1")
 
 [node name="Hitbox_detector" type="Area2D" parent="flipper"]
+position = Vector2(-17, -13)
 collision_layer = 0
 collision_mask = 2
-metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="flipper/Hitbox_detector"]
 position = Vector2(116.5, -3.5)
@@ -198,6 +199,7 @@ texture = ExtResource("2_lqhgl")
 position = Vector2(1, 0)
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_46g8s")
-animation = &"Player_run"
+animation = &"Player_Jump"
+metadata/_edit_lock_ = true
 
 [connection signal="body_entered" from="Hurtbox_detector" to="." method="_on_hurtbox_detector_body_entered"]
