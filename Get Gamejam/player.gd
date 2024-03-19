@@ -1,14 +1,13 @@
 extends CharacterBody2D
 
 
-const SPEED = 500.0
-const JUMP_VELOCITY = -600.0
+const SPEED = 400.0
+const JUMP_VELOCITY = -400.0
 
 var gravity: int = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var start_pos = global_position
 @onready var coyotejumptimer: Timer = $Coyotejumptimer
-@onready var anim = $AnimatedSprite2D 
-@onready var animation_tree: AnimationTree = $AnimationTree
+@onready var anim =  $flipper/AnimatedSprite2D
 var enemy_in_attack_range = false
 var player_attack_cooldown = true
 var player_alive = true 
@@ -23,7 +22,7 @@ func handle_jump():
 	if is_on_floor() or coyotejumptimer.time_left >  0.0:
 		if Input.is_action_just_pressed("Player_Jump"):
 			velocity.y = JUMP_VELOCITY
-			anim.play("Player_Jump")
+			anim.play("Player_Jump") 
 	if not is_on_floor():
 		if Input.is_action_just_released("Player_Jump") and velocity.y < JUMP_VELOCITY / 2: 
 			velocity.y = JUMP_VELOCITY / 2
@@ -45,22 +44,25 @@ func apply_gravity(delta):
 		velocity.y += gravity * delta
 func handle_movement(delta):
 	var direction := Input.get_axis("Player_left", "Player_right")
-	
 	if direction > 0:
-		$AnimatedSprite2D.flip_h = false
+		pass
+		#$flipper/AnimatedSprite2D.flip_h = false
 	if direction < 0:
-		$AnimatedSprite2D.flip_h = true
+		#$flipper/AnimatedSprite2D.flip_h = true
+		pass
 	if direction:
 		velocity.x = direction * SPEED
-		$Hitbox_detector.scale.x = abs($Hitbox_detector.scale.x)
+		$flipper/Hitbox_detector.scale.x = abs($flipper/Hitbox_detector.scale.x)
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-		
 func player_attack():
-	var hurtbox_detected = $Hitbox_detector.get_overlapping_areas() 
+	var hurtbox_detected = $flipper/Hitbox_detector.get_overlapping_areas() 
 	if Input.is_action_just_pressed("Attack"):
 		for area in hurtbox_detected:
 			var parent = area.get_parent()
-			print(parent.name," was hit")
-			
+			if parent.is_in_group("Enemy"):
+				area.get_parent().queue_free()
+				print(parent.name," was hit")
 
+func die():
+	pass
