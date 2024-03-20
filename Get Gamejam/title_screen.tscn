@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpfyiv5gx0wig"]
+
+[ext_resource type="Script" path="res://title_screen.gd" id="1_0w7gm"]
+[ext_resource type="Texture2D" uid="uid://qifxdjs3qtyl" path="res://froggy_adventures_logo.png" id="2_dg7di"]
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0w7gm")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_left = 80.0
+offset_top = -4.0
+offset_right = 2021.0
+offset_bottom = 1242.0
+texture = ExtResource("2_dg7di")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 79.0
+offset_right = 299.0
+offset_bottom = 120.0
+text = "Play"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 164.0
+offset_right = 299.0
+offset_bottom = 205.0
+text = "Quit"
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
