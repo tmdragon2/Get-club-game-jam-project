@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://dgn2xey5sitml" path="res://Animations/Snake attack/frame0024.png" id="14_4sgat"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nuk8x"]
-size = Vector2(110, 125)
+size = Vector2(114, 125)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5wmvv"]
 size = Vector2(127, 130)
@@ -107,7 +107,7 @@ collision_mask = 2
 script = ExtResource("1_4vw4l")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 2.5)
+position = Vector2(-1, 2.5)
 shape = SubResource("RectangleShape2D_nuk8x")
 
 [node name="Hurtbox" type="Area2D" parent="."]
@@ -129,7 +129,7 @@ position = Vector2(-22, 0)
 scale = Vector2(0.111, 0.195)
 sprite_frames = SubResource("SpriteFrames_afqgs")
 animation = &"Snake_attack"
-frame_progress = 0.651989
+frame_progress = 0.534861
 
 [connection signal="body_entered" from="Hurtbox" to="." method="_on_hurtbox_body_entered"]
 [connection signal="body_exited" from="Hurtbox" to="." method="_on_hurtbox_body_exited"]
