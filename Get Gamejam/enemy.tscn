@@ -1,7 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://degvwt1uuakvs"]
+[gd_scene load_steps=20 format=3 uid="uid://degvwt1uuakvs"]
 
 [ext_resource type="Script" path="res://enemy.gd" id="1_4vw4l"]
-[ext_resource type="Texture2D" uid="uid://3c63qdnidspf" path="res://icon.svg" id="1_08jjj"]
+[ext_resource type="Texture2D" uid="uid://cmeuw77sv05yy" path="res://Animations/Snake attack/frame0000.png" id="2_bgb40"]
+[ext_resource type="Texture2D" uid="uid://d21hvo5511g42" path="res://Animations/Snake attack/frame0002.png" id="3_cy5bn"]
+[ext_resource type="Texture2D" uid="uid://djl0byr1cwgi0" path="res://Animations/Snake attack/frame0004.png" id="4_blth6"]
+[ext_resource type="Texture2D" uid="uid://b3weay4wd7ha6" path="res://Animations/Snake attack/frame0006.png" id="5_gblma"]
+[ext_resource type="Texture2D" uid="uid://wkh5xf3txxr0" path="res://Animations/Snake attack/frame0008.png" id="6_otu5x"]
+[ext_resource type="Texture2D" uid="uid://cojj05soshdgk" path="res://Animations/Snake attack/frame0010.png" id="7_8myka"]
+[ext_resource type="Texture2D" uid="uid://bahjpnpnvn2hg" path="res://Animations/Snake attack/frame0012.png" id="8_eakfk"]
+[ext_resource type="Texture2D" uid="uid://b4tpfblxexhpl" path="res://Animations/Snake attack/frame0014.png" id="9_2e1dt"]
+[ext_resource type="Texture2D" uid="uid://dvjof4164qii7" path="res://Animations/Snake attack/frame0016.png" id="10_30gb7"]
+[ext_resource type="Texture2D" uid="uid://cup36ejygh6n" path="res://Animations/Snake attack/frame0018.png" id="11_6a77e"]
+[ext_resource type="Texture2D" uid="uid://bs4uerbivfl1c" path="res://Animations/Snake attack/frame0020.png" id="12_ofwit"]
+[ext_resource type="Texture2D" uid="uid://disie06l0lag3" path="res://Animations/Snake attack/frame0022.png" id="13_knnmw"]
+[ext_resource type="Texture2D" uid="uid://dgn2xey5sitml" path="res://Animations/Snake attack/frame0024.png" id="14_4sgat"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nuk8x"]
 size = Vector2(110, 125)
@@ -9,13 +21,90 @@ size = Vector2(110, 125)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5wmvv"]
 size = Vector2(127, 130)
 
+[sub_resource type="Animation" id="Animation_gx2ir"]
+length = 1.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Snake_attack"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5qenm"]
+_data = {
+"Snake_attack": SubResource("Animation_gx2ir")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_afqgs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_bgb40")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_cy5bn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_blth6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gblma")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_otu5x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8myka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_eakfk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2e1dt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_30gb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_6a77e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ofwit")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_knnmw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_4sgat")
+}],
+"loop": true,
+"name": &"Snake_attack",
+"speed": 10.0
+}]
+
 [node name="Enemy" type="CharacterBody2D" groups=["Enemy", "Hit"]]
 collision_layer = 3
 collision_mask = 2
 script = ExtResource("1_4vw4l")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_08jjj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 2.5)
@@ -28,6 +117,19 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
 position = Vector2(0.5, 1)
 shape = SubResource("RectangleShape2D_5wmvv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../AnimatedSprite2D")
+libraries = {
+"": SubResource("AnimationLibrary_5qenm")
+}
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-22, 0)
+scale = Vector2(0.111, 0.195)
+sprite_frames = SubResource("SpriteFrames_afqgs")
+animation = &"Snake_attack"
+frame_progress = 0.651989
 
 [connection signal="body_entered" from="Hurtbox" to="." method="_on_hurtbox_body_entered"]
 [connection signal="body_exited" from="Hurtbox" to="." method="_on_hurtbox_body_exited"]

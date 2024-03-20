@@ -44,20 +44,22 @@ func apply_gravity(delta):
 		velocity.y += gravity * delta
 func handle_movement(delta):
 	var direction := Input.get_axis("Player_left", "Player_right")
+
 	if direction > 0:
-		pass
+		anim.play("Player_run")
 		#$flipper/AnimatedSprite2D.flip_h = false
 	if direction < 0:
 		#$flipper/AnimatedSprite2D.flip_h = true
-		pass
+		anim.play("Player_run")
 	if direction:
 		velocity.x = direction * SPEED
 		$flipper/Hitbox_detector.scale.x = abs($flipper/Hitbox_detector.scale.x)
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 func player_attack():
-	var hurtbox_detected = $flipper/Hitbox_detector.get_overlapping_areas() 
-	if Input.is_action_just_pressed("Attack"):
+	var hurtbox_detected = $flipper/Hitbox_detector.get_overlapping_areas()
+	if Input.is_action_just_pressed("Attack") and is_on_floor():
+		anim.play("Player_attack")
 		for area in hurtbox_detected:
 			var parent = area.get_parent()
 			if parent.is_in_group("Enemy"):

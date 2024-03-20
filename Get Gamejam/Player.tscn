@@ -1,30 +1,38 @@
-[gd_scene load_steps=33 format=3 uid="uid://ws1o58f8l44h"]
+[gd_scene load_steps=43 format=3 uid="uid://ws1o58f8l44h"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_840ni"]
-[ext_resource type="Texture2D" uid="uid://d2w6x4lli36j3" path="res://Animations/frog jump/frame0000.png" id="2_agopa"]
-[ext_resource type="Texture2D" uid="uid://3c63qdnidspf" path="res://icon.svg" id="2_lqhgl"]
 [ext_resource type="Script" path="res://flipper.gd" id="2_yeoo1"]
-[ext_resource type="Texture2D" uid="uid://di8b7tfh4hd2s" path="res://Animations/frog jump/frame0003.png" id="5_psn87"]
-[ext_resource type="Texture2D" uid="uid://c80b20hwkjabm" path="res://Animations/frog jump/frame0005.png" id="7_c5182"]
-[ext_resource type="Texture2D" uid="uid://diul8sj24x8r0" path="res://Animations/frog jump/frame0007.png" id="9_gd0jq"]
-[ext_resource type="Texture2D" uid="uid://dnc6yg75buct5" path="res://Animations/frog run/frame0000.png" id="11_rjh6p"]
-[ext_resource type="Texture2D" uid="uid://bs3qhfdwt6tjl" path="res://Animations/frog jump/frame0009.png" id="11_y3b3i"]
-[ext_resource type="Texture2D" uid="uid://5xsyckmxrw41" path="res://Animations/frog run/frame0001.png" id="12_yoh1o"]
-[ext_resource type="Texture2D" uid="uid://bu7q5vf5xsdcm" path="res://Animations/frog jump/frame0011.png" id="13_8soes"]
-[ext_resource type="Texture2D" uid="uid://gdjer5eyod4c" path="res://Animations/frog run/frame0002.png" id="13_vx4ad"]
-[ext_resource type="Texture2D" uid="uid://blds04t1djffn" path="res://Animations/frog jump/frame0012.png" id="14_3bvo8"]
-[ext_resource type="Texture2D" uid="uid://bkf1ubl7hmogc" path="res://Animations/frog run/frame0003.png" id="14_txi21"]
-[ext_resource type="Texture2D" uid="uid://bb87ca4nvmao7" path="res://Animations/frog run/frame0016.png" id="15_8ktgq"]
-[ext_resource type="Texture2D" uid="uid://c00vww6ssbtjw" path="res://Animations/frog run/frame0017.png" id="16_xopi3"]
-[ext_resource type="Texture2D" uid="uid://b3f30q7wxjox8" path="res://Animations/frog run/frame0018.png" id="17_cl0jj"]
-[ext_resource type="Texture2D" uid="uid://gnrm6qemn55q" path="res://Animations/frog jump/frame0015.png" id="17_ncaa4"]
-[ext_resource type="Texture2D" uid="uid://cwy1dcg65xua3" path="res://Animations/frog run/frame0019.png" id="18_iixv6"]
-[ext_resource type="Texture2D" uid="uid://byy78jruhg2ox" path="res://Animations/frog jump/frame0016.png" id="18_xnu35"]
-[ext_resource type="Texture2D" uid="uid://ccmx3ndy3807i" path="res://Animations/frog run/frame0020.png" id="19_ek07o"]
-[ext_resource type="Texture2D" uid="uid://dwrjfkf6l66li" path="res://Animations/frog run/frame0021.png" id="20_obhk2"]
-[ext_resource type="Texture2D" uid="uid://by1g62gmumv6o" path="res://Animations/frog run/frame0022.png" id="21_gpdaq"]
-[ext_resource type="Texture2D" uid="uid://cpcftn81cr0kf" path="res://Animations/frog run/frame0023.png" id="22_cghbf"]
-[ext_resource type="Texture2D" uid="uid://dlqnq5cp7eu7p" path="res://Animations/frog run/frame0024.png" id="23_45hib"]
+[ext_resource type="Texture2D" uid="uid://cw1a2hhkuibye" path="res://Animations/New folder (2)/frame0000.png" id="4_3evq1"]
+[ext_resource type="Texture2D" uid="uid://tn8b1von5axh" path="res://Animations/New folder (2)/frame0002.png" id="5_nk866"]
+[ext_resource type="Texture2D" uid="uid://b3bwxlfi5qdwg" path="res://Animations/New folder (2)/frame0004.png" id="6_tf01n"]
+[ext_resource type="Texture2D" uid="uid://55nabsymb4iq" path="res://Animations/New folder (2)/frame0006.png" id="7_xhrby"]
+[ext_resource type="Texture2D" uid="uid://dtc3hg7hunp1g" path="res://Animations/New folder (2)/frame0008.png" id="8_rnqma"]
+[ext_resource type="Texture2D" uid="uid://bc1tj01laohnl" path="res://Animations/New folder (2)/frame0010.png" id="9_nr3j6"]
+[ext_resource type="Texture2D" uid="uid://biewt4xpmtll2" path="res://Animations/New folder (2)/frame0011.png" id="10_yqdy3"]
+[ext_resource type="Texture2D" uid="uid://bkdsa4qftsy2n" path="res://Animations/New folder (2)/frame0013.png" id="11_ucmcw"]
+[ext_resource type="Texture2D" uid="uid://cl4ynq4ti0hip" path="res://Animations/New folder (2)/frame0015.png" id="12_ahnpp"]
+[ext_resource type="Texture2D" uid="uid://df6li1rlpik4" path="res://Animations/New folder (2)/frame0017.png" id="13_uitm5"]
+[ext_resource type="Texture2D" uid="uid://em6j3uc5l6uf" path="res://Animations/New folder (2)/frame0020.png" id="14_es15y"]
+[ext_resource type="Texture2D" uid="uid://bmf7yy6d80vb8" path="res://Animations/frog attack/frame0000.png" id="15_ekkmg"]
+[ext_resource type="Texture2D" uid="uid://1gdw0w8t62ko" path="res://Animations/Frog run centered/frame0000.png" id="15_x38ti"]
+[ext_resource type="Texture2D" uid="uid://di84i1mlduwwf" path="res://Animations/Frog run centered/frame0002.png" id="16_yyj1b"]
+[ext_resource type="Texture2D" uid="uid://b4mwjtxy4rg4d" path="res://Animations/Frog run centered/frame0004.png" id="17_a04ab"]
+[ext_resource type="Texture2D" uid="uid://biehklue2kccy" path="res://Animations/frog attack/frame0002.png" id="17_gcyh5"]
+[ext_resource type="Texture2D" uid="uid://du0tt285v30vs" path="res://Animations/Frog run centered/frame0006.png" id="18_6evd4"]
+[ext_resource type="Texture2D" uid="uid://bqke1526cl0fw" path="res://Animations/frog attack/frame0003.png" id="18_kx8yk"]
+[ext_resource type="Texture2D" uid="uid://bssaih61lqsbu" path="res://Animations/Frog run centered/frame0008.png" id="19_5cwv1"]
+[ext_resource type="Texture2D" uid="uid://ckefxw71g73di" path="res://Animations/frog attack/frame0005.png" id="20_3hxvo"]
+[ext_resource type="Texture2D" uid="uid://bu28y1cyeh600" path="res://Animations/Frog run centered/frame0010.png" id="20_yv21m"]
+[ext_resource type="Texture2D" uid="uid://cxhtrsbohp7vw" path="res://Animations/Frog run centered/frame0012.png" id="21_vpxac"]
+[ext_resource type="Texture2D" uid="uid://d168yd1iiqmjh" path="res://Animations/Frog run centered/frame0014.png" id="22_m316h"]
+[ext_resource type="Texture2D" uid="uid://bh15yay83c3l" path="res://Animations/frog attack/frame0007.png" id="22_p0b37"]
+[ext_resource type="Texture2D" uid="uid://cg04868jrvn0a" path="res://Animations/Frog run centered/frame0016.png" id="23_0qltq"]
+[ext_resource type="Texture2D" uid="uid://dhpk3fm66sng6" path="res://Animations/Frog run centered/frame0018.png" id="24_1uxvn"]
+[ext_resource type="Texture2D" uid="uid://dl8tugk4l88r2" path="res://Animations/frog attack/frame0009.png" id="24_f5x26"]
+[ext_resource type="Texture2D" uid="uid://c5nblovalvl6n" path="res://Animations/Frog run centered/frame0020.png" id="25_qoii7"]
+[ext_resource type="Texture2D" uid="uid://dyc14xib5bqei" path="res://Animations/frog attack/frame0011.png" id="26_s32td"]
+[ext_resource type="Texture2D" uid="uid://bjh70d0afhto5" path="res://Animations/frog attack/frame0013.png" id="28_gplln"]
+[ext_resource type="Texture2D" uid="uid://dre0w4pw88v3w" path="res://Animations/frog attack/frame0015.png" id="30_81lx3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lymii"]
 size = Vector2(88, 86)
@@ -32,8 +40,8 @@ size = Vector2(88, 86)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_garyl"]
 size = Vector2(119, 115)
 
-[sub_resource type="Animation" id="Animation_cdfqq"]
-length = 0.9
+[sub_resource type="Animation" id="Animation_4g5uv"]
+length = 1.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -41,10 +49,10 @@ tracks/0/path = NodePath("flipper/AnimatedSprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -59,47 +67,110 @@ tracks/1/keys = {
 "values": ["Player_Jump"]
 }
 
-[sub_resource type="Animation" id="Animation_7c1cs"]
-resource_name = "Player_run"
+[sub_resource type="Animation" id="Animation_haerf"]
+length = 3.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("flipper/AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2, 2.2, 2.4, 2.6, 2.8, 3, 3.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("flipper/AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Player_attack"]
+}
+
+[sub_resource type="Animation" id="Animation_j0pwd"]
+length = 1.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("flipper/AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("flipper/AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Player_run"]
+}
+
+[sub_resource type="Animation" id="Animation_gwtgj"]
+resource_name = "frog_jump"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hbyoc"]
 _data = {
-"Player_Jump": SubResource("Animation_cdfqq"),
-"Player_run": SubResource("Animation_7c1cs")
+"Player_Jump": SubResource("Animation_4g5uv"),
+"Player_attack": SubResource("Animation_haerf"),
+"Player_run": SubResource("Animation_j0pwd"),
+"frog_jump": SubResource("Animation_gwtgj")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_weohk"]
-size = Vector2(123, 23)
+size = Vector2(207, 23)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_46g8s"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_agopa")
+"texture": ExtResource("4_3evq1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_psn87")
+"texture": ExtResource("5_nk866")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_c5182")
+"texture": ExtResource("6_tf01n")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_gd0jq")
+"texture": ExtResource("7_xhrby")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_y3b3i")
+"texture": ExtResource("8_rnqma")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_8soes")
+"texture": ExtResource("9_nr3j6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_3bvo8")
+"texture": ExtResource("10_yqdy3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("17_ncaa4")
+"texture": ExtResource("11_ucmcw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("18_xnu35")
+"texture": ExtResource("12_ahnpp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_uitm5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_es15y")
 }],
 "loop": false,
 "name": &"Player_Jump",
@@ -107,51 +178,77 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("11_rjh6p")
+"texture": ExtResource("15_ekkmg")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_yoh1o")
+"texture": ExtResource("17_gcyh5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_vx4ad")
+"texture": ExtResource("18_kx8yk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("14_txi21")
+"texture": ExtResource("20_3hxvo")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_8ktgq")
+"texture": ExtResource("22_p0b37")
 }, {
 "duration": 1.0,
-"texture": ExtResource("16_xopi3")
+"texture": ExtResource("24_f5x26")
 }, {
 "duration": 1.0,
-"texture": ExtResource("17_cl0jj")
+"texture": ExtResource("26_s32td")
 }, {
 "duration": 1.0,
-"texture": ExtResource("18_iixv6")
+"texture": ExtResource("28_gplln")
 }, {
 "duration": 1.0,
-"texture": ExtResource("19_ek07o")
+"texture": ExtResource("30_81lx3")
+}],
+"loop": false,
+"name": &"Player_attack",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_x38ti")
 }, {
 "duration": 1.0,
-"texture": ExtResource("20_obhk2")
+"texture": ExtResource("16_yyj1b")
 }, {
 "duration": 1.0,
-"texture": ExtResource("21_gpdaq")
+"texture": ExtResource("17_a04ab")
 }, {
 "duration": 1.0,
-"texture": ExtResource("22_cghbf")
+"texture": ExtResource("18_6evd4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("23_45hib")
+"texture": ExtResource("19_5cwv1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_yv21m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_vpxac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_m316h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_0qltq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_1uxvn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_qoii7")
 }],
 "loop": false,
 "name": &"Player_run",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [node name="Player" type="CharacterBody2D"]
-collision_layer = 0
+collision_layer = 4
 script = ExtResource("1_840ni")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -187,19 +284,12 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="flipper/Hitbox_detector"]
-position = Vector2(116.5, -3.5)
+position = Vector2(158.5, -3.5)
 shape = SubResource("RectangleShape2D_weohk")
 
-[node name="Sprite2D" type="Sprite2D" parent="flipper/Hitbox_detector"]
-position = Vector2(116.5, -3.5)
-scale = Vector2(0.976563, 0.195312)
-texture = ExtResource("2_lqhgl")
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="flipper"]
-position = Vector2(1, 0)
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.222405, 0.223344)
 sprite_frames = SubResource("SpriteFrames_46g8s")
-animation = &"Player_Jump"
-metadata/_edit_lock_ = true
+animation = &"Player_run"
 
 [connection signal="body_entered" from="Hurtbox_detector" to="." method="_on_hurtbox_detector_body_entered"]

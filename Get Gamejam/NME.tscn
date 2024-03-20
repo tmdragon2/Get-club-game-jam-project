@@ -1,13 +1,85 @@
-[gd_scene load_steps=5 format=3 uid="uid://b388mj5ldyxro"]
+[gd_scene load_steps=15 format=3 uid="uid://b388mj5ldyxro"]
 
 [ext_resource type="Script" path="res://NME.gd" id="1_6r3ok"]
-[ext_resource type="Texture2D" uid="uid://3c63qdnidspf" path="res://icon.svg" id="1_tyo73"]
+[ext_resource type="Texture2D" uid="uid://bmsnk6fo51pnu" path="res://Animations/Rollpoll move/frame0001.png" id="3_pqw1h"]
+[ext_resource type="Texture2D" uid="uid://cpjm5h1ukb7ir" path="res://Animations/Rollpoll move/frame0002.png" id="4_qsmk0"]
+[ext_resource type="Texture2D" uid="uid://kbsflmgqxvie" path="res://Animations/Rollpoll move/frame0003.png" id="5_ixogu"]
+[ext_resource type="Texture2D" uid="uid://bd2c2fv1v5kbu" path="res://Animations/Rollpoll move/frame0004.png" id="6_an4oy"]
+[ext_resource type="Texture2D" uid="uid://d020en3bej0xx" path="res://Animations/Rollpoll move/frame0005.png" id="7_nmuk7"]
+[ext_resource type="Texture2D" uid="uid://bpwbywp2gj44r" path="res://Animations/Rollpoll move/frame0006.png" id="8_cjds1"]
+[ext_resource type="Texture2D" uid="uid://bjtaq44qrlv0g" path="res://Animations/Rollpoll move/frame0007.png" id="9_i71px"]
+[ext_resource type="Texture2D" uid="uid://ciaqgagwgjvca" path="res://Animations/Rollpoll move/frame0008.png" id="10_ir1i2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ildu0"]
 size = Vector2(123.75, 123.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jgfe6"]
 size = Vector2(150, 158.75)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vjw0b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_pqw1h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qsmk0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ixogu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_an4oy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_nmuk7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_cjds1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i71px")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ir1i2")
+}],
+"loop": true,
+"name": &"roll_move",
+"speed": 10.0
+}]
+
+[sub_resource type="Animation" id="Animation_8xgsp"]
+length = 1.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["roll_move"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_d4o3v"]
+_data = {
+"roll_move": SubResource("Animation_8xgsp")
+}
 
 [node name="NME" type="CharacterBody2D" groups=["Enemy", "Hit"]]
 scale = Vector2(0.8, 0.8)
@@ -17,9 +89,6 @@ script = ExtResource("1_6r3ok")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(3.125, 0.625001)
 shape = SubResource("RectangleShape2D_ildu0")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_tyo73")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2(-63, 22)
@@ -34,5 +103,16 @@ collision_mask = 2
 position = Vector2(6.74998, -1.87497)
 scale = Vector2(0.999999, 0.999999)
 shape = SubResource("RectangleShape2D_jgfe6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.536794, 0.488014)
+sprite_frames = SubResource("SpriteFrames_vjw0b")
+animation = &"roll_move"
+frame_progress = 0.959186
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_d4o3v")
+}
 
 [connection signal="body_entered" from="Hurtbox" to="." method="_on_area_2d_body_entered"]

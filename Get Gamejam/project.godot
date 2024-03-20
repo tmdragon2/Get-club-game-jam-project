@@ -54,6 +54,7 @@ Attack={
 
 2d_physics/layer_1="Collidable with ground"
 2d_physics/layer_2="ENEMY"
+2d_physics/layer_3="Player"
 
 [rendering]
 

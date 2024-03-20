@@ -15,13 +15,13 @@ position = Vector2(617, 582)
 scale = Vector2(12.54, 0.975)
 
 [node name="Platform2" parent="." instance=ExtResource("1_vbp68")]
-position = Vector2(1022, 459)
+position = Vector2(-454, 375)
 
 [node name="Platform3" parent="." instance=ExtResource("1_vbp68")]
 position = Vector2(1269, 428)
 
 [node name="Enemy" parent="." instance=ExtResource("3_5mqlw")]
-position = Vector2(281, 187)
+position = Vector2(1050, 426)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_q5g81")
