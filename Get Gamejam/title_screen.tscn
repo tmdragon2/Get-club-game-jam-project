@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bpfyiv5gx0wig"]
+[gd_scene load_steps=4 format=3 uid="uid://bpfyiv5gx0wig"]
 
 [ext_resource type="Script" path="res://title_screen.gd" id="1_0w7gm"]
+[ext_resource type="Texture2D" uid="uid://btflplsgsgoqt" path="res://sky background.png" id="2_6tq4x"]
 [ext_resource type="Texture2D" uid="uid://qifxdjs3qtyl" path="res://froggy_adventures_logo.png" id="2_dg7di"]
 
 [node name="TitleScreen" type="Control"]
@@ -12,13 +13,17 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0w7gm")
 
+[node name="SkyBackground" type="Sprite2D" parent="."]
+position = Vector2(571.5, 318.5)
+scale = Vector2(2.24023, 1.25977)
+texture = ExtResource("2_6tq4x")
+
 [node name="TextureRect" type="TextureRect" parent="."]
-z_index = -1
-layout_mode = 0
-offset_left = 80.0
-offset_top = -4.0
-offset_right = 2021.0
-offset_bottom = 1242.0
+z_index = 1
+offset_left = -11.0
+offset_top = -71.0
+offset_right = 1930.0
+offset_bottom = 1175.0
 texture = ExtResource("2_dg7di")
 expand_mode = 1
 stretch_mode = 4
