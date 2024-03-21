@@ -1,4 +1,4 @@
 extends ColorRect
 
 
-signal Levelbeaten
+signal Level_completed

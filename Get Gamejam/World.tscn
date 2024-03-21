@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bu2g0xqct1u5t"]
+[gd_scene load_steps=11 format=3 uid="uid://bu2g0xqct1u5t"]
 
 [ext_resource type="Script" path="res://World.gd" id="1_0p5lv"]
 [ext_resource type="Texture2D" uid="uid://ckld45pxsjg2q" path="res://Cave_Tileset.png" id="2_1dvpx"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b388mj5ldyxro" path="res://NME.tscn" id="4_ugeix"]
 [ext_resource type="Texture2D" uid="uid://bh4cy3l8esa4f" path="res://water background.png" id="6_ubvt6"]
 [ext_resource type="PackedScene" uid="uid://cbs36753lw6je" path="res://Level_completed.tscn" id="8_bg586"]
+[ext_resource type="Texture2D" uid="uid://b7a1c886adxfm" path="res://6-25-SI--10-B.jpg" id="8_mcugr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mu7q7"]
 texture = ExtResource("2_1dvpx")
@@ -207,3 +208,15 @@ position = Vector2(3909, 430)
 
 [node name="Enemy5" parent="." instance=ExtResource("3_5mqlw")]
 position = Vector2(4060, 436)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 3431.0
+offset_top = 268.0
+offset_right = 4085.0
+offset_bottom = 291.0
+text = "YOU WIN! (im sorry blame alex for not finishing the game he got beat up by the bird^)"
+
+[node name="dumb bird" type="Sprite2D" parent="."]
+position = Vector2(4068, 212)
+scale = Vector2(0.480952, 0.379365)
+texture = ExtResource("8_mcugr")

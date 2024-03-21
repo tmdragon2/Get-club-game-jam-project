@@ -21,7 +21,7 @@ buses/default_bus_layout="res://Audio/default_bus_layout.tres"
 
 [autoload]
 
-Levelbeaten="*res://Level_completed.gd"
+Level_completed="*res://Level_completed.gd"
 
 [editor_plugins]
 
