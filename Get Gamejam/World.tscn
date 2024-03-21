@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bu2g0xqct1u5t"]
+[gd_scene load_steps=11 format=3 uid="uid://bu2g0xqct1u5t"]
 
 [ext_resource type="Script" path="res://World.gd" id="1_0p5lv"]
 [ext_resource type="Texture2D" uid="uid://ckld45pxsjg2q" path="res://Cave_Tileset.png" id="2_1dvpx"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://degvwt1uuakvs" path="res://enemy.tscn" id="3_5mqlw"]
 [ext_resource type="PackedScene" uid="uid://b388mj5ldyxro" path="res://NME.tscn" id="4_ugeix"]
 [ext_resource type="Texture2D" uid="uid://bh4cy3l8esa4f" path="res://water background.png" id="6_ubvt6"]
+[ext_resource type="PackedScene" uid="uid://blr7g2hl3gej" path="res://Platform.tscn" id="7_5grbj"]
+[ext_resource type="PackedScene" uid="uid://cbs36753lw6je" path="res://Level_completed.tscn" id="8_bg586"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mu7q7"]
 texture = ExtResource("2_1dvpx")
@@ -170,3 +172,18 @@ motion_mirroring = Vector2(1, 1)
 position = Vector2(1658.5, 386)
 scale = Vector2(9.7207, 1.92578)
 texture = ExtResource("6_ubvt6")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[node name="Platform" parent="." instance=ExtResource("7_5grbj")]
+position = Vector2(630, 691)
+scale = Vector2(14.52, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" parent="CanvasLayer" instance=ExtResource("8_bg586")]
+visible = false
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 2.0
+offset_bottom = 3.0
