@@ -30,5 +30,5 @@ func flip():
 		speed = abs(speed) * -1 
 
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	pass
+func _on_hurtbox_tree_exited() -> void:
+	print("oh great heavens")

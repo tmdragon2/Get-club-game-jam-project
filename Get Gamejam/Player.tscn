@@ -252,6 +252,7 @@ collision_layer = 4
 script = ExtResource("1_840ni")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -115,4 +115,4 @@ libraries = {
 "": SubResource("AnimationLibrary_d4o3v")
 }
 
-[connection signal="body_entered" from="Hurtbox" to="." method="_on_area_2d_body_entered"]
+[connection signal="tree_exited" from="Hurtbox" to="." method="_on_hurtbox_tree_exited"]

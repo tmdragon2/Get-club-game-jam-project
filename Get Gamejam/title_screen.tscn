@@ -20,10 +20,11 @@ texture = ExtResource("2_6tq4x")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 z_index = 1
+layout_mode = 0
 offset_left = -11.0
 offset_top = -71.0
-offset_right = 1930.0
-offset_bottom = 1175.0
+offset_right = 1688.0
+offset_bottom = 1195.0
 texture = ExtResource("2_dg7di")
 expand_mode = 1
 stretch_mode = 4
